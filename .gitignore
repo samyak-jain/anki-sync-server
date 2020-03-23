@@ -1,4 +1,13 @@
 *.pyc
+/.coverage
+/AnkiServer.egg-info
+/development.ini
+/server.log
+/collections
+/session.db
+/auth.db
+/dist
+/build
 *.db
 
 /ankisyncd/_version.py

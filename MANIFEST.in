@@ -1,0 +1,5 @@
+include *.txt *.rst
+recursive-include anki-bundled *
+recursive-exclude anki-bundled *.pyc
+prune anki-bundle/.git
+include example.ini logging.conf supervisor-anki-server.conf
