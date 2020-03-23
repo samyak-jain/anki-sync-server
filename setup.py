@@ -13,7 +13,7 @@ setup(
     version="2.0.6",
     description="A personal Anki sync server (so you can sync against your own server rather than AnkiWeb)",
     long_description=open('README.rst').read(),
-    license='LICENSE.txt',
+    license='COPYING',
     author="David Snopek",
     author_email="dsnopek@gmail.com",
     url="https://github.com/dsnopek/anki-sync-server",
