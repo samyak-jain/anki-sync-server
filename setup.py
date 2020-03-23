@@ -1,11 +1,6 @@
 
 from setuptools import setup
 
-#try:
-#    from setuptools import setup
-#except ImportError:
-#    from distutils.core import setup
-
 def get_anki_bundled_files():
     import os
     data_files = []
