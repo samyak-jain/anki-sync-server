@@ -1,0 +1,45 @@
+image: python:3.7
+
+variables:
+  ENV: ci
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+    - .venv/
+
+before_script:
+  # Print out python version for debugging
+  - python -V
+  - make init
+
+stages:
+  - lint
+  - tests
+  - build
+  - release
+
+lint:
+  stage: lint
+  script:
+    - make lint
+
+tests:
+  stage: tests
+  script:
+    - make tests
+
+build:
+  stage: build
+  script:
+    - make build
+  only:
+    - develop
+
+release:
+  stage: release
+  script:
+    - make release
+  only:
+    - develop

@@ -13,12 +13,20 @@ export
 help:
 	@awk 'BEGIN {FS = " ?#?: "; print ""${ANKI_SERVER_NAME}" "${ANKI_SERVER_VERSION}"\n"${ANKI_SERVER_DESCRIPTION}"\n\nUsage: make \033[36m<command>\033[0m\n\nCommands:"} /^.PHONY: ?[a-zA-Z_-]/ { printf "  \033[36m%-10s\033[0m %s\n", $$2, $$3 }' $(MAKEFILE_LIST)
 
+.PHONY: lint #: Run static code analysis.
+lint: print-env
+	@true
+
+.PHONY: tests #: Run tests
+tests: print-env
+	@true
+
 .PHONY: docs #: Build and serve documentation.
 docs: print-env
 	@${MKDOCS} ${MKDOCS_OPTION} -f docs/mkdocs.yml
 
 .PHONY: notebooks #: Run jupyter notebooks.
-notebooks:
+notebooks: print-env
 	@${JUPYTER} ${JUPYTER_OPTION}
 
 %:
