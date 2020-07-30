@@ -82,4 +82,3 @@ webencodings==0.5.1
 webob==1.8.6
 widgetsnbextension==3.5.1
 zipp==3.1.0; python_version < "3.8"
--e src/.
