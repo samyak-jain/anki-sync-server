@@ -16,7 +16,7 @@ RUN mkdir /app/data && \
 COPY config /app/config
 COPY scripts /app/scripts
 
-CMD /app/scripts/startup.sh
+CMD /app/scripts/docker_startup.sh
 
 EXPOSE 27701
 
